@@ -1,0 +1,4 @@
+﻿npm i -g webpack-cli  //全局安装
+npm i -D webpack    //局部安装webpack
+npm i -D babel-core babel-loader babel-preset-env //Babel
+npm i -D sass-loader node-sass style-loader css-loader //打包css依赖模块

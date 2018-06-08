@@ -1,0 +1,19 @@
+@mixin textStyle(@fontSize:12,@lineHeight:14,@color:#686868){
+    font-size: @fontSize;
+    line-height: @lineHeight;
+    color: @color;
+}
+@mixin box(@color){
+    width:100%;
+    background: @color;
+}
+@mixin boxCenter(@width:1100){
+    width: @width;
+    margin: 0 auto;
+}
+
+
+.headerNav{
+    @include box(#f2f2f2);
+}
+.head

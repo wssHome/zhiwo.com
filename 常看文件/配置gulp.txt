@@ -1,0 +1,22 @@
+﻿npm init
+npm install gulp -g   全局安装 gulp
+npm install gulp --save-dev  局部安装 gulp
+npm install --save-dev gulp-babel babel-preset-es2015 babel-core 安装bable 打包工具
+npm install gulp-webpack --save-dev   安装gulp-webpack模块
+npm install del --save-dev    安装删除模块
+
+
+npm i -D  **（模块名）
+
+gulp-uglify     uglify 模块（用于压缩 JS）
+gulp-concat    合并
+gulp-rename    改名
+gulp-minify-css     minify-css 模块（用于压缩 CSS）
+gulp-sass      编译scss
+gulp-minify-html     压缩html
+gulp-html-replace     html中替换
+gulp-connect    本地服务器
+
+
+
+npm install  //根据 package.json 的依赖，自动下载模块了

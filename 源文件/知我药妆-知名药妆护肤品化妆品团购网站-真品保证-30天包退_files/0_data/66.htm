@@ -1,0 +1,59 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=GBK"><script>
+(function () {
+	function getCookie(name) {
+		var start = document.cookie.indexOf(name + "=");
+		var len = start + name.length + 1;
+		if ((!start) && (name != document.cookie.substring(0, name.length))) {
+			return null;
+		}
+		if (start == -1) {
+			return null;
+		}
+		var end = document.cookie.indexOf(";", len);
+		if (end == -1) {
+			end = document.cookie.length;
+		}
+		return unescape(document.cookie.substring(len, end));
+	}
+	function setCookie(name, value, expires, path, domain, secure) {
+		var str = name + "=" + escape(value);
+		if (expires > 0) {
+			var date = new Date();
+			date.setTime(date.getTime() + expires * 24 * 3600 * 1000);
+			str += ";expires=" + date.toGMTString();
+		}
+		if (path) {
+			str += ";path=" + path;
+		}
+	
+		if (domain) {
+			str += ";domain=" + domain;
+		}
+	
+		if (secure) {
+			str += ";secure=" + secure;
+		}
+		document.cookie = str;
+	}
+	function getOldCookies(bhuid) {
+		var _this = this;
+		var url = "https://ncm.myrtb.net/mp?bhuid="+bhuid;
+		var img = new Image(1, 1);
+		img.src = url;
+		img.onload = function() {
+			img.onload = null;
+		}
+		setCookie("moved_bhcookie", "1", 7, "/", ".behe.com");
+	}
+	
+	if(getCookie("bhuid") != null) {
+		if (getCookie("moved_bhcookie") == null) {
+			if(getCookie("bhuid") != null && getCookie("bhuid") != ""){
+				getOldCookies(getCookie("bhuid"));
+			}
+		}
+	}
+})();
+</script>
+</head><body></body></html>

@@ -1,0 +1,1 @@
+(function(){var host = 'trac.imarvelous.cn';var b=window.location.href.match(/^http(s)?:\/\//g)||"http://",c=Math.round(1E5*Math.random()),a=document.createElement("script");a.type="text/javascript";a.src=b + host + "/v1/tracking/"+c+".js";a.async=!0;document.getElementsByTagName("head")[0].appendChild(a);})();

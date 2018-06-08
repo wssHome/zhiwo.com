@@ -1,0 +1,69 @@
+@charset 'utf-8';
+
+/**
+ *	@refreshTime	2015-01-16
+ *	@version		v1.0
+ *	@device			pc
+ */
+
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */
+{ 
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置默认字体 */
+body,
+button, input, select, textarea {
+    font: 12px \5b8b\4f53,\5fae\8f6f\96c5\9ed1,Tahoma, Helvetica, Arial, sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+address, cite, dfn, em, var，i{ font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a{text-decoration:none;outline:none;}
+a:hover{text-decoration:none;}
+abbr[title], acronym[title] {border-bottom: 1px dotted;cursor: help;} /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+.ell{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}/*单行文字溢出虚点显示*/
+
+/* 重置表单元素 */
+legend {color:#000; } /* for ie6 */
+fieldset{border:none;} /* 去除默认边框 */
+input,select,textarea{outline:none;}/*去掉chrome 浏览器 input textarea 获取焦点后的边框*/
+textarea{resize:none;}/*禁止textarea的拖拽功能*/
+/* select下的optgroup的斜体样式无法扶正 */
+
+input::-moz-placeholder, 
+textarea::-moz-placeholder {color:#c4c4c4;}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {color:#c4c4c4;}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {color:#c4c4c4;}
+
+
+/* 重置表格元素 */
+table {border-collapse:collapse;border-spacing:0;}/*表格单元格距离为0，border为单线*/
+table td{word-wrap:break-word;word-break:break-all;}/*解决table中都是‘字母’及'数字'时不折行的问题*/
+
+/* 重置图片元素 */
+img{border:0;}
+
+/*解决IE6下除a元素外，其它元素不支持“:hover”的问题*/
+body{behavior:url("css/csshover.htc");}
+
+/*清除浮动*/
+.clearfix:after{content:".";display:block;clear:both;visibility:hidden;height:0;}
+.clearfix{*zoom:1;}
+
+.fl{float:left;}
+.fr{float:right;}
+

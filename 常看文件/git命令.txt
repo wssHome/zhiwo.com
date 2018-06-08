@@ -1,0 +1,60 @@
+//����git  ����   ����
+git config --global user.name "wss"
+git config --global user.email "1224819416@qq.com"
+
+//�����汾��
+�����ļ��� Ȼ�� git init
+
+
+git add a.txt 		//���ļ� ��� �� �ֿ⣨�ύ���ݴ���
+git commit -m "��־1"   // ���ļ� �ύ�� �ֿ⣨�ύ���ֿ⣩
+git status     // �鿴״̬ 
+git diff a.txt // �鿴��Щ���ݷ����˱仯
+git log        //��־  git log --�����
+git reflog     
+
+//����
+git reset --hard HEAD^  //��һ�汾
+git reset --hard id�汾��
+
+
+
+
+//Զ�̷���
+
+ssh-keygen -t rsa -C "1224819416@qq.com" //����key
+
+
+
+//gitHub
+���������ҵ�Add SSH Key ���������titleֵ ��id_rsa.pub��Կ �����ȥ
+
+git remote add origin git@github.com:��url ��Ŀ��ַ��//�ѱ��زֿ�������ֿ������
+/*���� wssHome/zhiwo.git */
+git push -u origin master                           //���ؿ�������������͵�Զ�̿���
+git push origin master                       //�ѱ���master��֧�������޸�������GitHub
+git clone git@github.com:��url ��Ŀ��ַ��   //��Զ�̴���ֿ��¡������
+git pull --rebase origin master       //��Զ�̴���ֿ⸴�Ƶ�����
+
+
+
+//����
+
+  //�����ļ����״�����ʹ�ã���Ŀ��ֿ��¡������
+git clone https://gitee.com/��������/��Ŀ���.git 
+  //��ʼ��
+git init
+  /*���״����Ӳ���Ҫ�������Ժ�ʹ����Ҫ�ȸ��±��أ���ͬ�����ƣ�*/
+  //���±��ش洢��
+git pull ��Ŀ�� master --allow-unrelated-histories
+  //����ǰ�ļ����е������ļ����ύ
+git add .
+  //���ύ�Ķ�������˵��
+git commit -m ��˵�����ݡ�
+  //����Զ�ֿ̲� yyyy���ֿ��ַ�ļ�����֣��Զ������
+git remote add yyyy ��Ŀ��url
+  //�ϴ�
+push yyyy master
+
+//�����commit�ϲ�����һ�� commit
+$ git commit --amend --no-edit   # "--no-edit": ���޸�-m

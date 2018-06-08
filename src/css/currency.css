@@ -1,0 +1,37 @@
+/*作用讲通用样式写在一个文件里*/
+body,p,ul,form,input,ol,li{
+	margin: 0;
+	padding: 0;
+}
+body{ 
+	background:#fff; 
+	color:#333333; 
+	font-size:14px; 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+} 
+a{
+	color:#333333; 
+	text-decoration: none;
+}
+img{
+	display: block;
+	border:0;
+}
+li{
+	list-style: none;
+}
+input{
+	outline: none;
+}
+.clear:after{
+	content: "";
+	display: block;
+	height:0;
+	overflow: hidden;
+	visibility: hidden;
+	clear: both;
+}
+.clear{
+	zoom: 1;
+}
+
