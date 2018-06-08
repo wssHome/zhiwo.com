@@ -1,19 +1,180 @@
-@mixin textStyle(@fontSize:12,@lineHeight:14,@color:#686868){
-    font-size: @fontSize;
-    line-height: @lineHeight;
-    color: @color;
+@mixin textStyle($fontSize: 12,$lineHeight: 14 ,$color: #686868 ){
+    font-size: #{$fontSize}px;
+    line-height: #{$lineHeight}px;
+    color: $color;
 }
-@mixin box(@color){
+@mixin box( $color ){
     width:100%;
-    background: @color;
+    background: $color;
 }
-@mixin boxCenter(@width:1100){
-    width: @width;
+@mixin boxCenter( $width:1100 ){
+    width: #{$width}px;
     margin: 0 auto;
 }
 
-
-.headerNav{
-    @include box(#f2f2f2);
+a{
+    color:#696969;
+    &:hover{
+        color:#03b1e4;
+    }
 }
-.head
+/* 头部导航栏 */
+.headerNavBox{
+    @include box(#f2f2f2);
+    border-bottom:1px solid #e5e5e5 ;
+}
+.headerNav{
+    $hasIcon9_hoverBG : #FFFFFF;
+    
+    @include boxCenter;
+    @include textStyle(12,29,#6d6d6d);
+    .holle{
+        float: left;
+        margin-right: 35px;
+    }
+    .login{
+        float: left;
+        li{
+            float: left;
+            margin-right: 30px;
+        }
+    }
+    .headNav_nav{
+        float: right;
+        .line{
+            float: left;
+            padding: 0 4px;
+            color: #c3c3c3;
+        }
+        >li{
+            position: relative;
+            float: left;
+            padding:0 12px;
+            .icon-jiantou9{
+                margin-left: 8px;
+                font-size: 10px;
+            }
+            .icon-shouji{
+                margin-right: 6px;
+                color: #09ccec;
+                font-size: 15px;
+            }
+        }
+        .headNav_nav_hasIcon9{
+            >a{
+                margin-right: 13px;
+            }
+            .icon{
+                float: right;
+                width: 6px;
+                height: 29px;
+                background: url(../image/topnav.png) no-repeat 0px -70px;
+            }
+            &:hover{
+                background: $hasIcon9_hoverBG;
+            }
+            &:hover>.icon{
+                background: url(../image/topnav.png) no-repeat 0px -105px;
+            }
+            div{
+                position: absolute;
+                left: 0;
+                top:29px;
+                width: 100%;
+                display: none;
+                padding: 5px 0;
+                text-indent: 12px;
+                background: $hasIcon9_hoverBG;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* 头部 */
+.header{
+    @include boxCenter;
+    $color : #696969;
+    position: relative;
+    
+    @include textStyle(12,28,$color);
+    .logo{
+//      float: left;
+    }
+    .head_input{
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        .head_search{
+            border:2px solid #00c8fe;
+            #search{
+                @include textStyle(12,36,$color);
+                border: 0;
+                text-indent: 10px;
+                width: 328px;
+                float: left;
+            }
+            #search+span{
+                float: right;
+                width: 88px;
+                @include textStyle(16,36,#fff);
+                text-align: center;
+                background: #00c8fe;
+                cursor: pointer;
+            }
+        }
+        .head_searchBot{
+            >*{
+               float: left; 
+            }
+            
+            .line{
+                 @include textStyle(10,28,#c3c3c3);
+                 padding: 0 11px;
+            }
+        }
+    }
+    .head_shop{
+        position: absolute;
+        top: 29px;
+        right: 2px;
+        line-height: 36px;
+        text-align: center;
+        box-shadow:  0 0 3px #e2e2e2;
+        
+        .head_shop_Cart{
+            float: left;
+            width: 25px;
+            margin:0 10px;
+            height: 36px;
+            background: url(../image/topnav.png) no-repeat 0px -211px;
+        }
+        
+        .head_shop_bg{
+            float: right;
+            height: 36px;
+            width: 6px;
+            margin: 0 7px;
+            background: url(../image/topnav.png) no-repeat 0px -67px;
+        }
+        &:hover{
+            box-shadow:  0 0 5px #c4c4c4;
+        }
+        &:hover .head_shop_bg{
+            background: url(../image/topnav.png) no-repeat 0px -103px;
+        }
+            
+    }
+    
+    
+    
+}
+
+
+
+
+
+
