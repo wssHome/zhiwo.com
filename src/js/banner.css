@@ -1,0 +1,50 @@
+#sild{
+	position: relative;
+}
+#sild ul li{
+	position: absolute;
+	z-index: -1;
+}
+
+#sild ol{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#sild ol li{
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-left:10px ;
+	background :rgba(0,0,0,.4);
+	text-align :center;
+	line-height: 30px;
+	color: #F6F6F3;
+	cursor: pointer;
+}
+#sild>ol>.ol_click{
+	background:rgba(255,255,255,.4);
+	color:#00C7FE;
+}
+
+#sild p{
+	width: 20px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	background: rgba(0,0,0,.4);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#sild .leftP{
+	left: 40px;
+}
+#sild .rightP{
+	right: 40px;
+}
+
+
+

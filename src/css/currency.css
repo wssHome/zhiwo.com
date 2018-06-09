@@ -1,5 +1,5 @@
 /*作用讲通用样式写在一个文件里*/
-body,p,ul,form,input,ol,li{
+body,p,ul,form,input,ol,li,h1{
 	margin: 0;
 	padding: 0;
 }

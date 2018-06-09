@@ -1,11 +1,12 @@
 @charset "UTF-8";
-a {
+a, .mainpush .push_pic_left img {
   color: #696969; }
-  a:hover {
+  a:hover, .mainpush .push_pic_left img:hover {
     color: #03b1e4; }
 
 /* 头部导航栏 */
 .headerNavBox {
+  min-width: 1100px;
   width: 100%;
   background: #f2f2f2;
   border-bottom: 1px solid #e5e5e5; }
@@ -41,7 +42,7 @@ a {
         margin-right: 6px;
         color: #09ccec;
         font-size: 15px; }
-    .headerNav .headNav_nav .headNav_nav_hasIcon9 > a {
+    .headerNav .headNav_nav .headNav_nav_hasIcon9 > a, .headerNav .headNav_nav .mainpush .push_pic_left .headNav_nav_hasIcon9 > img, .mainpush .push_pic_left .headerNav .headNav_nav .headNav_nav_hasIcon9 > img {
       margin-right: 13px; }
     .headerNav .headNav_nav .headNav_nav_hasIcon9 .icon {
       float: right;
@@ -109,7 +110,7 @@ a {
     right: 2px;
     line-height: 36px;
     text-align: center;
-    box-shadow: 0 0 3px #e2e2e2; }
+    box-shadow: 0 0 2px #e2e2e2; }
     .header .head_shop .head_shop_Cart {
       float: left;
       width: 25px;
@@ -122,7 +123,203 @@ a {
       width: 6px;
       margin: 0 7px;
       background: url(../image/topnav.png) no-repeat 0px -67px; }
-    .header .head_shop:hover {
-      box-shadow: 0 0 5px #c4c4c4; }
     .header .head_shop:hover .head_shop_bg {
       background: url(../image/topnav.png) no-repeat 0px -103px; }
+    .header .head_shop #head_shop_box {
+      position: absolute;
+      right: 0;
+      top: 36px;
+      width: 290px;
+      height: 290px;
+      box-shadow: 0 0 3px #c4c4c4;
+      padding: 10px;
+      display: none;
+      background: #fff; }
+      .header .head_shop #head_shop_box img {
+        margin: 25px auto; }
+      .header .head_shop #head_shop_box p:first-of-type {
+        font-size: 22px;
+        line-height: 26px;
+        color: #c4c4c4; }
+      .header .head_shop #head_shop_box p:last-of-type {
+        font-size: 17px;
+        line-height: 32px;
+        color: #c4c4c4; }
+
+/* 导航 */
+.navBox {
+  min-width: 1100px;
+  width: 100%;
+  background: #00c7fe; }
+
+.nav {
+  width: 1100px;
+  margin: 0 auto; }
+  .nav .nav_left {
+    float: left;
+    position: relative; }
+    .nav .nav_left li {
+      float: left; }
+      .nav .nav_left li > a, .nav .nav_left .mainpush .push_pic_left li > img, .mainpush .push_pic_left .nav .nav_left li > img {
+        font-size: 13px;
+        line-height: 35px;
+        color: #fff;
+        width: 120px;
+        display: block;
+        text-align: center; }
+      .nav .nav_left li:first-child a, .nav .nav_left li:first-child .mainpush .push_pic_left img, .mainpush .push_pic_left .nav .nav_left li:first-child img {
+        background: rgba(0, 0, 0, 0.5); }
+      .nav .nav_left li .nav_left_taotao {
+        background: url(../image/home_overseas.gif); }
+        .nav .nav_left li .nav_left_taotao span {
+          opacity: 0; }
+        .nav .nav_left li .nav_left_taotao:hover {
+          background: url(../image/home_overseas_current.gif); }
+      .nav .nav_left li .icon-jiantou9 {
+        margin-left: 7px;
+        font-size: 12px;
+        line-height: 21px;
+        color: #fff;
+        display: inline-block;
+        vertical-align: middle; }
+    .nav .nav_left #nav_left_menu > a:hover, .nav .nav_left .mainpush .push_pic_left #nav_left_menu > img:hover, .mainpush .push_pic_left .nav .nav_left #nav_left_menu > img:hover {
+      background-color: rgba(0, 0, 0, 0.5); }
+      .nav .nav_left #nav_left_menu > a:hover .icon-jiantou9, .nav .nav_left .mainpush .push_pic_left #nav_left_menu > img:hover .icon-jiantou9, .mainpush .push_pic_left .nav .nav_left #nav_left_menu > img:hover .icon-jiantou9 {
+        opacity: 0; }
+    .nav .nav_left .nav_menu_box {
+      width: 1100px;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background: #FFFFFF;
+      padding: 45px 45px 0;
+      display: none; }
+      .nav .nav_left .nav_menu_box .nav_menu {
+        width: 357px;
+        height: 90px;
+        overflow: hidden;
+        float: left;
+        margin-right: 45px;
+        margin-bottom: 30px; }
+        .nav .nav_left .nav_menu_box .nav_menu p {
+          font-size: 14px;
+          line-height: 24px;
+          color: #6c6c6c;
+          font-weight: 900;
+          padding-bottom: 5px;
+          border-bottom: 1px dotted  #c4c4c4; }
+          .nav .nav_left .nav_menu_box .nav_menu p .iconfont {
+            font-size: 14px;
+            line-height: 14px;
+            color: #00c8ff; }
+        .nav .nav_left .nav_menu_box .nav_menu a, .nav .nav_left .nav_menu_box .nav_menu .mainpush .push_pic_left img, .mainpush .push_pic_left .nav .nav_left .nav_menu_box .nav_menu img {
+          font-size: 12px;
+          line-height: 27px;
+          color: #6c6c6c;
+          display: inline-block;
+          margin-right: 20px; }
+          .nav .nav_left .nav_menu_box .nav_menu a:hover, .nav .nav_left .nav_menu_box .nav_menu .mainpush .push_pic_left img:hover, .mainpush .push_pic_left .nav .nav_left .nav_menu_box .nav_menu img:hover {
+            color: #03b1e4; }
+  .nav .nav_right {
+    float: right; }
+    .nav .nav_right li {
+      float: left; }
+      .nav .nav_right li a, .nav .nav_right li .mainpush .push_pic_left img, .mainpush .push_pic_left .nav .nav_right li img {
+        display: block;
+        width: 30px;
+        overflow: hidden;
+        height: 35px;
+        transition: .5s; }
+      .nav .nav_right li a:hover, .nav .nav_right li .mainpush .push_pic_left img:hover, .mainpush .push_pic_left .nav .nav_right li img:hover {
+        min-width: 100px;
+        padding-right: 10px; }
+      .nav .nav_right li span {
+        font-size: 13px;
+        line-height: 31px;
+        color: #fff; }
+      .nav .nav_right li .iconfont {
+        font-size: 26px;
+        line-height: 30px;
+        color: #fff;
+        display: inline-block;
+        vertical-align: middle; }
+
+/* 轮播图 */
+/*大主题 用于一个背景*/
+.mainBox {
+  min-width: 1100px;
+  width: 100%;
+  background: #f6f7f2; }
+
+/* mainpush 主推 */
+.mainpush {
+  width: 1100px;
+  margin: 0 auto; }
+  .mainpush .news {
+    text-align: center;
+    font-size: 21px;
+    line-height: 63px;
+    color: #000a15;
+    padding-top: 22px; }
+  .mainpush .mainpush_pic {
+    margin-bottom: 20px; }
+  .mainpush .push_pic_left {
+    float: left;
+    width: 650px;
+    height: 350px;
+    position: relative; }
+    .mainpush .push_pic_left a, .mainpush .push_pic_left img {
+      width: 100%;
+      height: 100%; }
+    .mainpush .push_pic_left img {
+      transition: 1s; }
+      .mainpush .push_pic_left img:hover {
+        filter: brightness(1.05) contrast(105%); }
+  .mainpush .push_pic_right {
+    float: right;
+    width: 350px;
+    height: 350px;
+    background: #FFFFFF;
+    padding: 0 50px; }
+    .mainpush .push_pic_right .push_pic_time {
+      font-size: 14px;
+      line-height: 70px;
+      color: #020202;
+      text-align: center; }
+      .mainpush .push_pic_right .push_pic_time span {
+        font-size: 12px; }
+    .mainpush .push_pic_right .push_pic_text {
+      height: 154px;
+      margin-bottom: 40px; }
+      .mainpush .push_pic_right .push_pic_text a, .mainpush .push_pic_right .push_pic_text .push_pic_left img, .mainpush .push_pic_left .push_pic_right .push_pic_text img {
+        font-size: 16px;
+        line-height: 26px;
+        color: #717171;
+        display: block; }
+    .mainpush .push_pic_right .push_pic_care .push_pic_price {
+      float: left; }
+      .mainpush .push_pic_right .push_pic_care .push_pic_price span:first-child {
+        font-size: 15px;
+        line-height: 30px;
+        color: #000005;
+        float: left; }
+      .mainpush .push_pic_right .push_pic_care .push_pic_price span:last-child {
+        font-size: 26px;
+        line-height: 36px;
+        color: #000005; }
+    .mainpush .push_pic_right .push_pic_care .add_care {
+      float: right;
+      font-size: 18px;
+      line-height: 36px;
+      color: #faedc0;
+      text-align: center;
+      width: 140px;
+      background-color: #ff643c;
+      cursor: pointer; }
+      .mainpush .push_pic_right .push_pic_care .add_care:hover {
+        filter: brightness(1.1) contrast(110%); }
+    .mainpush .push_pic_right .push_pic_ratio {
+      font-size: 12px;
+      line-height: 39px;
+      color: #c6c6c6;
+      text-align: right; }

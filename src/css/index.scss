@@ -4,6 +4,7 @@
     color: $color;
 }
 @mixin box( $color ){
+    min-width: 1100px;
     width:100%;
     background: $color;
 }
@@ -11,6 +12,10 @@
     width: #{$width}px;
     margin: 0 auto;
 }
+@mixin gaoliang($brightness:1.1,$contrast:110%){
+    filter:  brightness($brightness) contrast($contrast);
+}
+
 
 a{
     color:#696969;
@@ -138,40 +143,267 @@ a{
         }
     }
     .head_shop{
+        $Height : 36px;
+        
         position: absolute;
         top: 29px;
         right: 2px;
-        line-height: 36px;
+        line-height: $Height;
         text-align: center;
-        box-shadow:  0 0 3px #e2e2e2;
+        box-shadow:  0 0 2px #e2e2e2;
         
         .head_shop_Cart{
             float: left;
             width: 25px;
             margin:0 10px;
-            height: 36px;
+            height: $Height;
             background: url(../image/topnav.png) no-repeat 0px -211px;
         }
         
         .head_shop_bg{
             float: right;
-            height: 36px;
+            height: $Height;
             width: 6px;
             margin: 0 7px;
             background: url(../image/topnav.png) no-repeat 0px -67px;
         }
-        &:hover{
-            box-shadow:  0 0 5px #c4c4c4;
-        }
         &:hover .head_shop_bg{
             background: url(../image/topnav.png) no-repeat 0px -103px;
         }
-            
+        #head_shop_box{
+            position: absolute;
+            right: 0;
+            top: $Height;
+            width: 290px;
+            height: 290px;
+            box-shadow:  0 0 3px #c4c4c4;
+            padding: 10px;
+            display: none;
+            background: #fff;
+            img{
+                margin: 25px auto;
+            }
+            p:first-of-type{
+                @include textStyle(22,26,#c4c4c4);
+            }
+            p:last-of-type{
+                @include textStyle(17,32,#c4c4c4);
+            }
+        }
     }
-    
-    
-    
 }
+
+/* 导航 */
+.navBox{
+    @include box(#00c7fe);
+}
+.nav{
+    @include boxCenter;
+    .nav_left{
+        float: left;
+        position: relative;
+        li{
+            float: left;
+            >a{
+                @include textStyle(13,35,#fff);
+                width: 120px;
+                display: block;
+                text-align: center;
+            }
+            &:first-child a{
+                background: rgba(0,0,0,.5);
+            }
+            .nav_left_taotao{
+                span{
+                    opacity: 0;
+                }
+                background:url(../image/home_overseas.gif);
+                &:hover{
+                    background:url(../image/home_overseas_current.gif);
+                }
+            }
+            .icon-jiantou9{
+                margin-left:7px;
+                @include textStyle(12,21,#fff);
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        #nav_left_menu{
+            >a:hover{
+                background-color: rgba(0,0,0,.5);
+                .icon-jiantou9{
+                    opacity: 0;
+                }
+            }
+        }
+        .nav_menu_box{
+            width:1100px;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            background: #FFFFFF;
+            padding: 45px 45px 0;
+            display: none;
+            .nav_menu{
+                width: 357px;
+                height: 90px;
+                overflow: hidden;
+                float: left;
+                margin-right: 45px;
+                margin-bottom: 30px;
+                p{
+                    @include textStyle(14,24,#6c6c6c);
+                    font-weight: 900;
+                    padding-bottom:5px ;
+                    border-bottom: 1px dotted  #c4c4c4;
+                    .iconfont{
+                        @include textStyle(14,14,#00c8ff);
+                    }
+                }
+                a{
+                    @include textStyle(12,27,#6c6c6c);
+                    display: inline-block;
+                    margin-right: 20px;
+                    &:hover{
+                        color:#03b1e4;
+                    }
+                }
+            }
+            
+        }
+    }
+    .nav_right{
+        float: right;
+        li{
+            float: left;
+            a{
+                display: block;
+                width: 30px;
+                overflow: hidden;
+                height: 35px;
+                transition:.5s ;
+            }
+            a:hover{
+                min-width: 100px;
+                padding-right: 10px;
+            }
+            span{
+                @include textStyle(13,31,#fff);
+            }
+            .iconfont{
+                @include textStyle(26,30,#fff);
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+/* 轮播图 */
+
+/*大主题 用于一个背景*/
+.mainBox{
+    @include box( #f6f7f2 );
+}
+/* mainpush 主推 */
+.mainpush{
+    $leftWidth : 650px;
+    $leftHeight: 350px;
+    @include boxCenter;
+    .news{
+        text-align: center;
+        @include textStyle(21,63,#000a15);
+        padding-top:22px ;
+    }
+    .mainpush_pic{
+        margin-bottom: 20px;
+    }
+    .push_pic_left{
+        float: left;
+        width: $leftWidth;
+        height: $leftHeight;
+        position: relative;
+        a{
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            @extend a;
+            transition: 1s;
+            &:hover{
+                @include gaoliang(1.05,105%);
+            }
+        }
+    }
+    .push_pic_right{
+        float: right;
+        width: 1100 - 100 - $leftWidth;
+        height: $leftHeight;
+        background: #FFFFFF;
+        padding: 0 50px;
+        .push_pic_time{
+            @include textStyle(14,70,#020202);
+            text-align: center;
+            span{
+                font-size: 12px;
+            }
+        }
+        .push_pic_text{
+            height: 154px;
+            margin-bottom: 40px;
+            a{
+                @include textStyle(16,26,#717171);
+                display: block;
+            }
+        } 
+        .push_pic_care{ 
+            .push_pic_price{
+                float: left;
+                span:first-child{
+                    @include textStyle(15,30,#000005);
+                    float: left;
+                }
+                span:last-child{
+                    @include textStyle(26,36,#000005);
+                }
+            }
+            .add_care{
+                float: right;
+                @include textStyle(18,36,#faedc0);
+                text-align: center;
+                width: 140px;
+                background-color: #ff643c ;
+                cursor: pointer;
+                &:hover{
+                    @include gaoliang;
+                }
+            }
+        }
+        .push_pic_ratio{
+            @include textStyle(12,39,#c6c6c6);
+            text-align: right;
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

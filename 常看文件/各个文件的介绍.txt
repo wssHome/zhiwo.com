@@ -1,3 +1,0 @@
-currency.css：作用讲通用样式写在一个文件里
-
-login.*:登录
