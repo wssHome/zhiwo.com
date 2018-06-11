@@ -1,0 +1,79 @@
+.brand ul{
+	border-bottom: 1px solid #6b6c67;
+}
+.brand ul>li{
+	line-height: 44px;
+	font-size: 14px;
+	color:#000000;
+	width: 140px;
+	float: left;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+}
+.brand ul>li>em{
+	position: absolute;
+	border-bottom:2px solid #03c6ff ;
+	left: 0;
+	bottom: -1px;
+	width: 100%;
+	display: none;
+}
+.brand ol{
+	position: relative;
+	top: 12px;
+	height: 244px;
+}	
+.brand ol>li{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.brand ol>li a,.brand ol>li>div{
+	float: left;
+}
+.brand ol>li>div{
+	width: 840px;
+}
+.brand ol>li>div>a{
+	width: 160px;
+	height: 102px;
+	margin: 0 8px 8px 0;
+}
+.brand ol>li>a{
+	width: 260px;
+	height: 212px;
+}
+.brand ol>li img{
+	width: 100%;
+	height: 100%;
+}
+.brand ol p{
+	position: absolute;
+    line-height: 74px;
+    font-size: 40px;
+    color: #878e96;
+    width: 28px;
+    text-align: center;
+    bottom: 102px;
+    cursor: pointer;
+    /*background: red;*/
+}
+.brand ol #tab_left{
+	right: 230px;
+}
+.brand ol #tab_right{
+	right: 0;
+}
+.brand ol>.block{
+	display: block;
+}
+.brand ul>.click{
+	color: #03C6FF;
+}
+.brand ul>.click em{
+	display: block;
+}
